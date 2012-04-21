@@ -45,7 +45,7 @@ public class TestOwlAPI {
 
 			// Print ontology
 			OWLOntologyDocumentTarget documentTarget = new SystemOutDocumentTarget();
-			manager.saveOntology(pizzaOntology, owlFormat, new SystemOutDocumentTarget());
+			manager.saveOntology(pizzaOntology, owlFormat, documentTarget);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
