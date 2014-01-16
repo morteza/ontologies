@@ -1,0 +1,1004 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://onto.ir/ontologies/2011/7/AnytimeOS#"
+     xml:base="http://onto.ir/ontologies/2011/7/AnytimeOS"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS">
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">Morteza Ansarinia</rdfs:isDefinedBy>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#APeriodicTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#APeriodicTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#AbstractHardwareObject -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#AbstractHardwareObject">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Application -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Application">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Bootloader -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Bootloader">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#BurstDeviceDriverTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#BurstDeviceDriverTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceDriverTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#CharacterDeviceDriverTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#CharacterDeviceDriverTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceDriverTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#CommunicationProtocol -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#CommunicationProtocol">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Compiler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Compiler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Toolchain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ConditionalVariableModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ConditionalVariableModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ContextSwitchModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ContextSwitchModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ProcessManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ControlFlowCheckingModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ControlFlowCheckingModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorDetectionModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#CoreReloadingModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#CoreReloadingModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorCorrectionModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Debugger -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Debugger">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Toolchain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Designer -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Designer">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Toolchain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceDriverTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceDriverTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#DriverTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceProtocol -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceProtocol">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#CommunicationProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Directory -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Directory">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DiskScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DiskScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#LongTermScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DiskSchedulerModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DiskSchedulerModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MiddleTermScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DiskStorageManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DiskStorageManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MassStorageModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DistributedFileSystemModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DistributedFileSystemModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DistributedProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DistributedProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MultiProcessor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DistributedTaskScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DistributedTaskScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#TaskScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DriverTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DriverTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SporadicTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DualPriorityScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DualPriorityScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#PriorityScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#DynamicLibrary -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#DynamicLibrary">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorCorrectionModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorCorrectionModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FailoverManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorDetectionModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorDetectionModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FailoverManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Event -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Event">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#EventManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#EventManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ExceptionHandlingModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ExceptionHandlingModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorCorrectionModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ExceptionModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ExceptionModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorDetectionModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#FailoverManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#FailoverManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#File -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#File">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#StorageManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemObject -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemObject">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Flag -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Flag">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#HardRealTimeScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#HardRealTimeScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#RealTimeTaskScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Hardware -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Hardware"/>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#HardwareAbstractLayerAPI -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#HardwareAbstractLayerAPI">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#OperatingSystemAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Hypervisor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Hypervisor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SporadicTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#IO -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#IO">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#IOSchedulerModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#IOSchedulerModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MiddleTermScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#InterProcessCommunicationAPI -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#InterProcessCommunicationAPI">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#OperatingSystemAPI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Interrupt -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Interrupt">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptHandler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptHandler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptServiceRoutine -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptServiceRoutine">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#InterruptManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Library -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Library">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Linker -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Linker">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Toolchain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#List -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#List">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#LongTermScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#LongTermScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MainMemoryManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MainMemoryManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MassStorageModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MassStorageModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#StorageManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Memory -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Memory">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryObject -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryObject">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryPage -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryPage">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MemorySchedulerModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MemorySchedulerModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MiddleTermScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MemorySegment -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MemorySegment">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Message -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Message">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MicroRebootingModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MicroRebootingModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorCorrectionModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MiddleTermScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MiddleTermScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Monitor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Monitor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ResourceSynchronizationModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MultiLevelFeedbackQueueScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MultiLevelFeedbackQueueScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#PreemptiveScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MultiProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MultiProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Processor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#MulticoreProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#MulticoreProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MultiProcessor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Mutex -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Mutex">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ResourceSynchronizationModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#NetworkFileSystemModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#NetworkFileSystemModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#NetworkProtocol -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#NetworkProtocol">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#CommunicationProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#NonPreemptiveScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#NonPreemptiveScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#NonRealTimeTaskScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#NonRealTimeTaskScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#TaskScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#OfflineScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#OfflineScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#OperatingSystemAPI -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#OperatingSystemAPI">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Protocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ParallelIO -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ParallelIO">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#IO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ParallelProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ParallelProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MultiProcessor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#PeriodicTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#PeriodicTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Pipe -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Pipe">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#PortDeviceDriverTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#PortDeviceDriverTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#DeviceDriverTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#PreemptiveScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#PreemptiveScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#PriorityScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#PriorityScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#PreemptiveScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ProcessManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ProcessManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Processor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Processor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Protocol -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Protocol">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Queue -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Queue">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#RAIDStorageManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#RAIDStorageManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#DiskStorageManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#RAM -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#RAM">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Memory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ROM -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ROM">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Memory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#RealTimeTaskScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#RealTimeTaskScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#TaskScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#RemoteLibrary -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#RemoteLibrary">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ResourceSynchronizationModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ResourceSynchronizationModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SynchronizationModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SchedulerTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SchedulerTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#APeriodicTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SecurityModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SecurityModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Semaphore -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Semaphore">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ResourceSynchronizationModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SerialIO -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SerialIO">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#IO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#ShortTermScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#ShortTermScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Scheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SingleCoreProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SingleCoreProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SingleProcessor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SingleProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SingleProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Processor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SoftRealTimeTaskScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SoftRealTimeTaskScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#RealTimeTaskScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Software -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Software">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SporadicTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SporadicTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#StandardLibrary -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#StandardLibrary">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#StaticLibrary -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#StaticLibrary">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#StorageManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#StorageManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SynchronizationModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SynchronizationModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#KernelModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Task -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Task">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#TaskScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#TaskScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ShortTermScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#TaskSchedulerModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#TaskSchedulerModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MiddleTermScheduler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#Toolchain -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#Toolchain">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualFileSystemModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualFileSystemModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#FileSystemModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMachine -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMachine">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SystemSoftware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMemoryManagementModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMemoryManagementModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MemoryManagementModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMemoryScheduler -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMemoryScheduler">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#MemorySchedulerModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualObject -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualObject">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualSingleCoreProcessor -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#VirtualSingleCoreProcessor">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#SingleProcessor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#WatchdogModule -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#WatchdogModule">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#ErrorDetectionModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://onto.ir/ontologies/2011/7/AnytimeOS#WatchdogTask -->
+
+    <owl:Class rdf:about="http://onto.ir/ontologies/2011/7/AnytimeOS#WatchdogTask">
+        <rdfs:subClassOf rdf:resource="http://onto.ir/ontologies/2011/7/AnytimeOS#PeriodicTask"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
