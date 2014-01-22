@@ -5,7 +5,7 @@ Repository for ontologies developed for specific purposes. Read more about them 
 
 ### Ontologies
 
-[ ] TBW
+- [ ] TBW
 
 ### Copyright
 
