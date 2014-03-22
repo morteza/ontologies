@@ -1,0 +1,17 @@
+
+@prefix dt: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+@prefix : <#> .  # this document
+
+
+
+<#surface>	a owl:Property;
+	rdfs:label "surface";
+	rdfs:range dt:string .
+
+<#prep>	a owl:Property;
+	rdfs:label "preposition";
+	rdfs:range dt:string .

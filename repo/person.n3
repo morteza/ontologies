@@ -1,0 +1,44 @@
+
+@prefix dt: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix nl: <http://people.csail.mit.edu/stewart/nl.n3#> .
+
+
+@prefix : <#> .  # this document
+
+
+<#Person>	a owl:Class;
+	rdfs:comment "";
+	nl:surface "person";
+	nl:surface "someone";
+	rdfs:label "Person" .
+
+<#fullname>	a owl:Property;
+	rdfs:label "Full Name";
+	nl:prep "named";
+	nl:prep "name";
+	rdfs:range dt:string .
+
+<#eaddress>	a owl:Property;
+	rdfs:label "Email address";
+	nl:prep "is";
+	nl:prep "of";
+	rdfs:range :Email .
+
+
+
+
+<#Email>	a owl:Class;
+	nl:surface "email";
+	nl:surface "has email";
+	nl:surface "email address";
+	rdfs:label "Email address" .
+
+<#mbox>	a owl:Property;
+	rdfs:label "Email address string";
+	nl:prep "is";
+	nl:prep "of";
+	rdfs:range dt:string .
