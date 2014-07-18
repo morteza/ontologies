@@ -1,0 +1,3 @@
+[submodule "occlupanids"]
+	path = occlupanids
+	url = git@github.com:morteza/occlupanid-ontology.git
