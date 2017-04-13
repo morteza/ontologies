@@ -1,3 +1,4 @@
+Prefix(:=<http://onto.ir/ontologies/NervousSystem#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,186 +7,592 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://onto.ir/ontologies/NervousSystem>
-Annotation(<http://onto.ir/ontologies/NervousSystem#authorEmail> "ansarinia@me.com"@en)
-Annotation(<http://onto.ir/ontologies/NervousSystem#author> "ansarinia_m@iricss.org"@en)
-Annotation(<http://onto.ir/ontologies/NervousSystem#author> "Morteza Ansarinia"@en)
+Annotation(:author "Morteza Ansarinia"@en)
+Annotation(:author "ansarinia_m@iricss.org"@en)
+Annotation(:authorEmail "ansarinia@me.com"@en)
 
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#AfferentNeuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Astrocyte>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#AutomaticNervousSystem>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#AutomaticNeuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Axon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Brain>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#BrainRegion>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Cell>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#CellBody>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#CellStructure>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#CerebellarNuclei>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Cerebellum>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#CerebralCortex>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Dendrite>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Diencephalon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#EfferentNeuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#EpendymalCell>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Epithalamus>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#FrontalLobe>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#GrayMatter>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#HabenularNuclei>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Hypothalamus>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#InsularCortex>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#IntegerationCenter>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Interneuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#LimbicLob>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Lobe>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#MacroglialCell>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#MedullaOblongata>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Mesencephalon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Metencephalon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#MicroglialCell>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Midbrain>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Myelencephalon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#MyelinSheath>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#MyelinatedAxon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Neuroglia>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Neuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#NodeOfRanvier>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#OccipitalLobe>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Oligodendrocyte>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#ParietalLob>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#PeripheralNervousSystem>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#PinealBody>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Pons>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SatelliteCell>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SchwannCell>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SensoryNeuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SomaticMotorNeuron>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SomaticNervousSystem>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SpinalCord>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#StriaMedullares>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Subthalamus>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#SynapticEndBulb>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#TaeniaThalami>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Tectum>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Telencephalon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#TemporalLob>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#ThalamicNucleus>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#Thalamus>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#UnmyelinatedAxon>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#WhiteMatter>))
-Declaration(Class(<http://onto.ir/ontologies/NervousSystem#ZonaIncerta>))
-Declaration(ObjectProperty(<http://onto.ir/ontologies/NervousSystem#contains>))
-Declaration(ObjectProperty(<http://onto.ir/ontologies/NervousSystem#locatedIn>))
-Declaration(ObjectProperty(<http://onto.ir/ontologies/NervousSystem#partOf>))
-Declaration(DataProperty(<http://onto.ir/ontologies/NervousSystem#residesIn>))
-Declaration(NamedIndividual(<http://onto.ir/ontologies/NervousSystem#Broca>))
-Declaration(NamedIndividual(<http://onto.ir/ontologies/NervousSystem#DorsolateralPrefrontalCortex>))
-Declaration(AnnotationProperty(<http://onto.ir/ontologies/NervousSystem#aka>))
-Declaration(AnnotationProperty(<http://onto.ir/ontologies/NervousSystem#author>))
-Declaration(AnnotationProperty(<http://onto.ir/ontologies/NervousSystem#authorEmail>))
-EquivalentClasses(<http://onto.ir/ontologies/NervousSystem#AfferentNeuron> <http://onto.ir/ontologies/NervousSystem#SensoryNeuron>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#AfferentNeuron> <http://onto.ir/ontologies/NervousSystem#Neuron>)
-DisjointClasses(<http://onto.ir/ontologies/NervousSystem#AfferentNeuron> <http://onto.ir/ontologies/NervousSystem#EfferentNeuron>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#Astrocyte> "سلول‌های ستاره‌ای شکل"@fa)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#Astrocyte> "آستروسیت"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Astrocyte> <http://onto.ir/ontologies/NervousSystem#MacroglialCell>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#AutomaticNervousSystem> <http://onto.ir/ontologies/NervousSystem#PeripheralNervousSystem>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#AutomaticNeuron> <http://onto.ir/ontologies/NervousSystem#EfferentNeuron>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Axon> <http://onto.ir/ontologies/NervousSystem#CellStructure>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Axon> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#Neuron>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Brain> <http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Brain> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem>))
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#Cell> "سلول"@fa)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#CellBody> "Soma"@en)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CellBody> <http://onto.ir/ontologies/NervousSystem#CellStructure>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CellBody> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#Neuron>))
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> "CNS"@en)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> "سیستم اعصاب مرکزی"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> <http://onto.ir/ontologies/NervousSystem#IntegerationCenter>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> ObjectSomeValuesFrom(<http://onto.ir/ontologies/NervousSystem#contains> <http://onto.ir/ontologies/NervousSystem#Astrocyte>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> ObjectSomeValuesFrom(<http://onto.ir/ontologies/NervousSystem#contains> <http://onto.ir/ontologies/NervousSystem#EpendymalCell>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> ObjectSomeValuesFrom(<http://onto.ir/ontologies/NervousSystem#contains> <http://onto.ir/ontologies/NervousSystem#MicroglialCell>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem> ObjectSomeValuesFrom(<http://onto.ir/ontologies/NervousSystem#contains> <http://onto.ir/ontologies/NervousSystem#Oligodendrocyte>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CerebellarNuclei> <http://onto.ir/ontologies/NervousSystem#Metencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Cerebellum> <http://onto.ir/ontologies/NervousSystem#Metencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#CerebralCortex> <http://onto.ir/ontologies/NervousSystem#Metencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Dendrite> <http://onto.ir/ontologies/NervousSystem#CellStructure>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Dendrite> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#Neuron>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Diencephalon> <http://onto.ir/ontologies/NervousSystem#GrayMatter>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#EfferentNeuron> <http://onto.ir/ontologies/NervousSystem#Neuron>)
-DisjointClasses(<http://onto.ir/ontologies/NervousSystem#EfferentNeuron> <http://onto.ir/ontologies/NervousSystem#SensoryNeuron>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#EpendymalCell> <http://onto.ir/ontologies/NervousSystem#MacroglialCell>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Epithalamus> <http://onto.ir/ontologies/NervousSystem#Diencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#FrontalLobe> <http://onto.ir/ontologies/NervousSystem#Lobe>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#GrayMatter> <http://onto.ir/ontologies/NervousSystem#BrainRegion>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#HabenularNuclei> <http://onto.ir/ontologies/NervousSystem#Epithalamus>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Hypothalamus> <http://onto.ir/ontologies/NervousSystem#Diencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#InsularCortex> <http://onto.ir/ontologies/NervousSystem#Lobe>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Interneuron> <http://onto.ir/ontologies/NervousSystem#Neuron>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#LimbicLob> <http://onto.ir/ontologies/NervousSystem#Lobe>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#LimbicLob> ObjectAllValuesFrom(<http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#FrontalLobe>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#LimbicLob> ObjectAllValuesFrom(<http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#ParietalLob>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#LimbicLob> ObjectAllValuesFrom(<http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#TemporalLob>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Lobe> <http://onto.ir/ontologies/NervousSystem#BrainRegion>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#MacroglialCell> "سلول‌های ماکروگلی"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#MacroglialCell> <http://onto.ir/ontologies/NervousSystem#Neuroglia>)
-DisjointClasses(<http://onto.ir/ontologies/NervousSystem#MacroglialCell> <http://onto.ir/ontologies/NervousSystem#MicroglialCell>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#MedullaOblongata> <http://onto.ir/ontologies/NervousSystem#Myelencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Mesencephalon> <http://onto.ir/ontologies/NervousSystem#GrayMatter>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Metencephalon> <http://onto.ir/ontologies/NervousSystem#GrayMatter>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#MicroglialCell> "سلول‌های گلیال کوچک"@fa)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#MicroglialCell> "میکروگلی"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#MicroglialCell> <http://onto.ir/ontologies/NervousSystem#Neuroglia>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Midbrain> <http://onto.ir/ontologies/NervousSystem#BrainRegion>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Myelencephalon> <http://onto.ir/ontologies/NervousSystem#GrayMatter>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#MyelinSheath> <http://onto.ir/ontologies/NervousSystem#CellStructure>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#MyelinSheath> ObjectSomeValuesFrom(<http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#Axon>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#MyelinatedAxon> <http://onto.ir/ontologies/NervousSystem#Axon>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#Neuroglia> "سلول‌های گلی"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Neuroglia> <http://onto.ir/ontologies/NervousSystem#Cell>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Neuron> <http://onto.ir/ontologies/NervousSystem#Cell>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#NodeOfRanvier> <http://onto.ir/ontologies/NervousSystem#CellStructure>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#NodeOfRanvier> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#Axon>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#OccipitalLobe> <http://onto.ir/ontologies/NervousSystem#Lobe>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#Oligodendrocyte> "سلول‌های گلیال کم‌دندریت"@fa)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#Oligodendrocyte> "الیگودندروگلی"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Oligodendrocyte> <http://onto.ir/ontologies/NervousSystem#MacroglialCell>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#ParietalLob> <http://onto.ir/ontologies/NervousSystem#Lobe>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#PeripheralNervousSystem> "PNS"@en)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#PeripheralNervousSystem> <http://onto.ir/ontologies/NervousSystem#IntegerationCenter>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#PinealBody> <http://onto.ir/ontologies/NervousSystem#Epithalamus>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Pons> <http://onto.ir/ontologies/NervousSystem#Metencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SatelliteCell> <http://onto.ir/ontologies/NervousSystem#Neuroglia>)
-AnnotationAssertion(rdfs:label <http://onto.ir/ontologies/NervousSystem#SchwannCell> "سلول شوان"@fa)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SchwannCell> <http://onto.ir/ontologies/NervousSystem#Neuroglia>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SensoryNeuron> <http://onto.ir/ontologies/NervousSystem#Neuron>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SomaticMotorNeuron> <http://onto.ir/ontologies/NervousSystem#EfferentNeuron>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SomaticNervousSystem> <http://onto.ir/ontologies/NervousSystem#PeripheralNervousSystem>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SpinalCord> <http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SpinalCord> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#CenteralNervousSystem>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#StriaMedullares> <http://onto.ir/ontologies/NervousSystem#Epithalamus>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Subthalamus> <http://onto.ir/ontologies/NervousSystem#Diencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SynapticEndBulb> <http://onto.ir/ontologies/NervousSystem#CellStructure>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#SynapticEndBulb> ObjectExactCardinality(1 <http://onto.ir/ontologies/NervousSystem#partOf> <http://onto.ir/ontologies/NervousSystem#Neuron>))
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#TaeniaThalami> <http://onto.ir/ontologies/NervousSystem#Epithalamus>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Tectum> <http://onto.ir/ontologies/NervousSystem#Midbrain>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Telencephalon> <http://onto.ir/ontologies/NervousSystem#GrayMatter>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#TemporalLob> <http://onto.ir/ontologies/NervousSystem#Lobe>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#ThalamicNucleus> <http://onto.ir/ontologies/NervousSystem#Subthalamus>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#Thalamus> <http://onto.ir/ontologies/NervousSystem#Diencephalon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#UnmyelinatedAxon> <http://onto.ir/ontologies/NervousSystem#Axon>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#WhiteMatter> <http://onto.ir/ontologies/NervousSystem#BrainRegion>)
-SubClassOf(<http://onto.ir/ontologies/NervousSystem#ZonaIncerta> <http://onto.ir/ontologies/NervousSystem#Subthalamus>)
-AnnotationAssertion(rdfs:comment <http://onto.ir/ontologies/NervousSystem#residesIn> "Defines Brodmann's Area where a brain area resides in.")
-FunctionalDataProperty(<http://onto.ir/ontologies/NervousSystem#residesIn>)
-DataPropertyDomain(<http://onto.ir/ontologies/NervousSystem#residesIn> <http://onto.ir/ontologies/NervousSystem#BrainRegion>)
-DataPropertyRange(<http://onto.ir/ontologies/NervousSystem#residesIn> xsd:integer)
-ClassAssertion(<http://onto.ir/ontologies/NervousSystem#BrainRegion> <http://onto.ir/ontologies/NervousSystem#Broca>)
-AnnotationAssertion(<http://onto.ir/ontologies/NervousSystem#aka> <http://onto.ir/ontologies/NervousSystem#DorsolateralPrefrontalCortex> "DLPFC")
-ClassAssertion(<http://onto.ir/ontologies/NervousSystem#BrainRegion> <http://onto.ir/ontologies/NervousSystem#DorsolateralPrefrontalCortex>)
-DataPropertyAssertion(<http://onto.ir/ontologies/NervousSystem#residesIn> <http://onto.ir/ontologies/NervousSystem#DorsolateralPrefrontalCortex> "46"^^xsd:integer)
-SubAnnotationPropertyOf(<http://onto.ir/ontologies/NervousSystem#aka> rdfs:comment)
-SubAnnotationPropertyOf(<http://onto.ir/ontologies/NervousSystem#author> rdfs:comment)
-SubAnnotationPropertyOf(<http://onto.ir/ontologies/NervousSystem#authorEmail> rdfs:comment)
-DisjointClasses(<http://onto.ir/ontologies/NervousSystem#Astrocyte> <http://onto.ir/ontologies/NervousSystem#EpendymalCell> <http://onto.ir/ontologies/NervousSystem#Oligodendrocyte>)
+Declaration(Class(:AfferentNeuron))
+Declaration(Class(:AlvearPathway))
+Declaration(Class(:Astrocyte))
+Declaration(Class(:AutomaticNervousSystem))
+Declaration(Class(:AutomaticNeuron))
+Declaration(Class(:Axon))
+Declaration(Class(:Brain))
+Declaration(Class(:BrainRegion))
+Declaration(Class(:Cell))
+Declaration(Class(:CellBody))
+Declaration(Class(:CellStructure))
+Declaration(Class(:CenteralNervousSystem))
+Declaration(Class(:CerebellarNuclei))
+Declaration(Class(:Cerebellum))
+Declaration(Class(:CerebralCortex))
+Declaration(Class(:CerebralVentricle))
+Declaration(Class(:CingulateGyrus))
+Declaration(Class(:Cingulum))
+Declaration(Class(:Circuit))
+Declaration(Class(:Connection))
+Declaration(Class(:Dendrite))
+Declaration(Class(:Diencephalon))
+Declaration(Class(:EfferentNeuron))
+Declaration(Class(:Emotion))
+Declaration(Class(:EntorhinalCortex))
+Declaration(Class(:EpendymalCell))
+Declaration(Class(:Epithalamus))
+Declaration(Class(:Fornix))
+Declaration(Class(:FrontalLobe))
+Declaration(Class(:Function))
+Declaration(Class(:GrayMatter))
+Declaration(Class(:HabenularNuclei))
+Declaration(Class(:Hypothalamus))
+Declaration(Class(:InsularCortex))
+Declaration(Class(:IntegerationCenter))
+Declaration(Class(:Interneuron))
+Declaration(Class(:LateralMammillaryNuclei))
+Declaration(Class(:LimbicLob))
+Declaration(Class(:Lobe))
+Declaration(Class(:MacroglialCell))
+Declaration(Class(:MammillaryNuclei))
+Declaration(Class(:MedialMammillaryNuclei))
+Declaration(Class(:MedullaOblongata))
+Declaration(Class(:Memory))
+Declaration(Class(:Mesencephalon))
+Declaration(Class(:Metencephalon))
+Declaration(Class(:MicroglialCell))
+Declaration(Class(:Midbrain))
+Declaration(Class(:Model))
+Declaration(Class(:Myelencephalon))
+Declaration(Class(:MyelinSheath))
+Declaration(Class(:MyelinatedAxon))
+Declaration(Class(:Neuroglia))
+Declaration(Class(:Neuron))
+Declaration(Class(:NodeOfRanvier))
+Declaration(Class(:Nuclei))
+Declaration(Class(:OccipitalLobe))
+Declaration(Class(:Oligodendrocyte))
+Declaration(Class(:PapezCircuit))
+Declaration(Class(:ParahippocampalGyrus))
+Declaration(Class(:ParietalLob))
+Declaration(Class(:Pathway))
+Declaration(Class(:PerforantPathway))
+Declaration(Class(:PeripheralNervousSystem))
+Declaration(Class(:PinealBody))
+Declaration(Class(:Pons))
+Declaration(Class(:SatelliteCell))
+Declaration(Class(:SchwannCell))
+Declaration(Class(:SensoryNeuron))
+Declaration(Class(:SomaticMotorNeuron))
+Declaration(Class(:SomaticNervousSystem))
+Declaration(Class(:SpinalCord))
+Declaration(Class(:StriaMedullares))
+Declaration(Class(:SubcorticalNuclei))
+Declaration(Class(:Subiculum))
+Declaration(Class(:Subthalamus))
+Declaration(Class(:SynapticEndBulb))
+Declaration(Class(:TaeniaThalami))
+Declaration(Class(:Tectum))
+Declaration(Class(:Telencephalon))
+Declaration(Class(:TemporalLob))
+Declaration(Class(:ThalamicNucleus))
+Declaration(Class(:Thalamus))
+Declaration(Class(:UnmyelinatedAxon))
+Declaration(Class(:Ventricle))
+Declaration(Class(:WhiteMatter))
+Declaration(Class(:ZonaIncerta))
+Declaration(ObjectProperty(:contains))
+Declaration(ObjectProperty(:locatedIn))
+Declaration(ObjectProperty(:originatesIn))
+Declaration(ObjectProperty(:partOf))
+Declaration(ObjectProperty(:terminatesIn))
+Declaration(ObjectProperty(:through))
+Declaration(DataProperty(:residesIn))
+Declaration(NamedIndividual(:Broca))
+Declaration(NamedIndividual(:DorsolateralPrefrontalCortex))
+Declaration(AnnotationProperty(<dcns:date>))
+Declaration(AnnotationProperty(:aka))
+Declaration(AnnotationProperty(:author))
+Declaration(AnnotationProperty(:authorEmail))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: :aka (:aka)
+
+SubAnnotationPropertyOf(:aka rdfs:comment)
+
+# Annotation Property: :author (:author)
+
+SubAnnotationPropertyOf(:author rdfs:comment)
+
+# Annotation Property: :authorEmail (:authorEmail)
+
+SubAnnotationPropertyOf(:authorEmail rdfs:comment)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :originatesIn (:originatesIn)
+
+AnnotationAssertion(<dcns:date> :originatesIn "1492102223269"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :originatesIn "morteza"^^xsd:string)
+
+# Object Property: :terminatesIn (:terminatesIn)
+
+AnnotationAssertion(<dcns:date> :terminatesIn "1492102221296"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :terminatesIn "morteza"^^xsd:string)
+
+# Object Property: :through (:through)
+
+AnnotationAssertion(<dcns:date> :through "1492102226561"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :through "morteza"^^xsd:string)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :residesIn (:residesIn)
+
+AnnotationAssertion(rdfs:comment :residesIn "Defines Brodmann's Area where a brain area resides in.")
+FunctionalDataProperty(:residesIn)
+DataPropertyDomain(:residesIn :BrainRegion)
+DataPropertyRange(:residesIn xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :AfferentNeuron (:AfferentNeuron)
+
+EquivalentClasses(:AfferentNeuron :SensoryNeuron)
+SubClassOf(:AfferentNeuron :Neuron)
+DisjointClasses(:AfferentNeuron :EfferentNeuron)
+
+# Class: :AlvearPathway (:AlvearPathway)
+
+AnnotationAssertion(<dcns:date> :AlvearPathway "1492101948781"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :AlvearPathway "morteza"^^xsd:string)
+SubClassOf(:AlvearPathway :Pathway)
+
+# Class: :Astrocyte (آستروسیت)
+
+AnnotationAssertion(rdfs:label :Astrocyte "آستروسیت"@fa)
+AnnotationAssertion(rdfs:label :Astrocyte "سلول‌های ستاره‌ای شکل"@fa)
+SubClassOf(:Astrocyte :MacroglialCell)
+
+# Class: :AutomaticNervousSystem (:AutomaticNervousSystem)
+
+SubClassOf(:AutomaticNervousSystem :PeripheralNervousSystem)
+
+# Class: :AutomaticNeuron (:AutomaticNeuron)
+
+SubClassOf(:AutomaticNeuron :EfferentNeuron)
+
+# Class: :Axon (:Axon)
+
+SubClassOf(:Axon :CellStructure)
+SubClassOf(:Axon ObjectExactCardinality(1 :partOf :Neuron))
+
+# Class: :Brain (:Brain)
+
+SubClassOf(:Brain :CenteralNervousSystem)
+SubClassOf(:Brain ObjectExactCardinality(1 :partOf :CenteralNervousSystem))
+
+# Class: :Cell (سلول)
+
+AnnotationAssertion(rdfs:label :Cell "سلول"@fa)
+
+# Class: :CellBody (Soma)
+
+AnnotationAssertion(rdfs:label :CellBody "Soma"@en)
+SubClassOf(:CellBody :CellStructure)
+SubClassOf(:CellBody ObjectExactCardinality(1 :partOf :Neuron))
+
+# Class: :CenteralNervousSystem (سیستم اعصاب مرکزی)
+
+AnnotationAssertion(rdfs:label :CenteralNervousSystem "CNS"@en)
+AnnotationAssertion(rdfs:label :CenteralNervousSystem "سیستم اعصاب مرکزی"@fa)
+SubClassOf(:CenteralNervousSystem :IntegerationCenter)
+SubClassOf(:CenteralNervousSystem ObjectSomeValuesFrom(:contains :Astrocyte))
+SubClassOf(:CenteralNervousSystem ObjectSomeValuesFrom(:contains :EpendymalCell))
+SubClassOf(:CenteralNervousSystem ObjectSomeValuesFrom(:contains :MicroglialCell))
+SubClassOf(:CenteralNervousSystem ObjectSomeValuesFrom(:contains :Oligodendrocyte))
+
+# Class: :CerebellarNuclei (:CerebellarNuclei)
+
+SubClassOf(:CerebellarNuclei :Metencephalon)
+
+# Class: :Cerebellum (:Cerebellum)
+
+SubClassOf(:Cerebellum :Metencephalon)
+
+# Class: :CerebralCortex (:CerebralCortex)
+
+SubClassOf(:CerebralCortex :Metencephalon)
+
+# Class: :CerebralVentricle (:CerebralVentricle)
+
+AnnotationAssertion(<dcns:date> :CerebralVentricle "1492102449392"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :CerebralVentricle "morteza"^^xsd:string)
+SubClassOf(:CerebralVentricle :Ventricle)
+
+# Class: :CingulateGyrus (:CingulateGyrus)
+
+AnnotationAssertion(<dcns:date> :CingulateGyrus "1492101850942"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :CingulateGyrus "morteza"^^xsd:string)
+SubClassOf(:CingulateGyrus :BrainRegion)
+
+# Class: :Cingulum (:Cingulum)
+
+AnnotationAssertion(<dcns:date> :Cingulum "1492101860974"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Cingulum "morteza"^^xsd:string)
+SubClassOf(:Cingulum :BrainRegion)
+
+# Class: :Circuit (:Circuit)
+
+AnnotationAssertion(<dcns:date> :Circuit "1492101761868"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Circuit "morteza"^^xsd:string)
+
+# Class: :Connection (:Connection)
+
+AnnotationAssertion(<dcns:date> :Connection "1492102262499"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Connection "morteza"^^xsd:string)
+
+# Class: :Dendrite (:Dendrite)
+
+SubClassOf(:Dendrite :CellStructure)
+SubClassOf(:Dendrite ObjectExactCardinality(1 :partOf :Neuron))
+
+# Class: :Diencephalon (:Diencephalon)
+
+SubClassOf(:Diencephalon :GrayMatter)
+
+# Class: :EfferentNeuron (:EfferentNeuron)
+
+SubClassOf(:EfferentNeuron :Neuron)
+DisjointClasses(:EfferentNeuron :SensoryNeuron)
+
+# Class: :Emotion (:Emotion)
+
+AnnotationAssertion(<dcns:date> :Emotion "1492101797025"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Emotion "morteza"^^xsd:string)
+SubClassOf(:Emotion :Function)
+
+# Class: :EntorhinalCortex (:EntorhinalCortex)
+
+AnnotationAssertion(<dcns:date> :EntorhinalCortex "1492101920959"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :EntorhinalCortex "morteza"^^xsd:string)
+SubClassOf(:EntorhinalCortex :BrainRegion)
+
+# Class: :EpendymalCell (:EpendymalCell)
+
+SubClassOf(:EpendymalCell :MacroglialCell)
+
+# Class: :Epithalamus (:Epithalamus)
+
+SubClassOf(:Epithalamus :Diencephalon)
+
+# Class: :Fornix (:Fornix)
+
+AnnotationAssertion(<dcns:date> :Fornix "1492101886364"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Fornix "morteza"^^xsd:string)
+SubClassOf(:Fornix :BrainRegion)
+
+# Class: :FrontalLobe (:FrontalLobe)
+
+SubClassOf(:FrontalLobe :Lobe)
+
+# Class: :Function (:Function)
+
+AnnotationAssertion(<dcns:date> :Function "1492101791191"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Function "morteza"^^xsd:string)
+
+# Class: :GrayMatter (:GrayMatter)
+
+SubClassOf(:GrayMatter :BrainRegion)
+
+# Class: :HabenularNuclei (:HabenularNuclei)
+
+SubClassOf(:HabenularNuclei :Epithalamus)
+
+# Class: :Hypothalamus (:Hypothalamus)
+
+SubClassOf(:Hypothalamus :Diencephalon)
+
+# Class: :InsularCortex (:InsularCortex)
+
+SubClassOf(:InsularCortex :Lobe)
+
+# Class: :Interneuron (:Interneuron)
+
+SubClassOf(:Interneuron :Neuron)
+
+# Class: :LateralMammillaryNuclei (:LateralMammillaryNuclei)
+
+AnnotationAssertion(<dcns:date> :LateralMammillaryNuclei "1492101999500"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :LateralMammillaryNuclei "morteza"^^xsd:string)
+SubClassOf(:LateralMammillaryNuclei :MammillaryNuclei)
+SubClassOf(:LateralMammillaryNuclei ObjectSomeValuesFrom(:partOf :PapezCircuit))
+
+# Class: :LimbicLob (:LimbicLob)
+
+SubClassOf(:LimbicLob :Lobe)
+SubClassOf(:LimbicLob ObjectAllValuesFrom(:partOf :FrontalLobe))
+SubClassOf(:LimbicLob ObjectAllValuesFrom(:partOf :ParietalLob))
+SubClassOf(:LimbicLob ObjectAllValuesFrom(:partOf :TemporalLob))
+
+# Class: :Lobe (:Lobe)
+
+SubClassOf(:Lobe :BrainRegion)
+
+# Class: :MacroglialCell (سلول‌های ماکروگلی)
+
+AnnotationAssertion(rdfs:label :MacroglialCell "سلول‌های ماکروگلی"@fa)
+SubClassOf(:MacroglialCell :Neuroglia)
+DisjointClasses(:MacroglialCell :MicroglialCell)
+
+# Class: :MammillaryNuclei (:MammillaryNuclei)
+
+AnnotationAssertion(<dcns:date> :MammillaryNuclei "1492101984965"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :MammillaryNuclei "morteza"^^xsd:string)
+SubClassOf(:MammillaryNuclei :Nuclei)
+
+# Class: :MedialMammillaryNuclei (:MedialMammillaryNuclei)
+
+AnnotationAssertion(<dcns:date> :MedialMammillaryNuclei "1492102005015"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :MedialMammillaryNuclei "morteza"^^xsd:string)
+SubClassOf(:MedialMammillaryNuclei :MammillaryNuclei)
+SubClassOf(:MedialMammillaryNuclei ObjectSomeValuesFrom(:partOf :PapezCircuit))
+
+# Class: :MedullaOblongata (:MedullaOblongata)
+
+SubClassOf(:MedullaOblongata :Myelencephalon)
+
+# Class: :Memory (:Memory)
+
+AnnotationAssertion(<dcns:date> :Memory "1492101801510"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Memory "morteza"^^xsd:string)
+SubClassOf(:Memory :Function)
+
+# Class: :Mesencephalon (:Mesencephalon)
+
+SubClassOf(:Mesencephalon :GrayMatter)
+
+# Class: :Metencephalon (:Metencephalon)
+
+SubClassOf(:Metencephalon :GrayMatter)
+
+# Class: :MicroglialCell (سلول‌های گلیال کوچک)
+
+AnnotationAssertion(rdfs:label :MicroglialCell "سلول‌های گلیال کوچک"@fa)
+AnnotationAssertion(rdfs:label :MicroglialCell "میکروگلی"@fa)
+SubClassOf(:MicroglialCell :Neuroglia)
+
+# Class: :Midbrain (:Midbrain)
+
+SubClassOf(:Midbrain :BrainRegion)
+
+# Class: :Model (:Model)
+
+AnnotationAssertion(<dcns:date> :Model "1492102388208"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Model "morteza"^^xsd:string)
+
+# Class: :Myelencephalon (:Myelencephalon)
+
+SubClassOf(:Myelencephalon :GrayMatter)
+
+# Class: :MyelinSheath (:MyelinSheath)
+
+SubClassOf(:MyelinSheath :CellStructure)
+SubClassOf(:MyelinSheath ObjectSomeValuesFrom(:partOf :Axon))
+
+# Class: :MyelinatedAxon (:MyelinatedAxon)
+
+SubClassOf(:MyelinatedAxon :Axon)
+
+# Class: :Neuroglia (سلول‌های گلی)
+
+AnnotationAssertion(rdfs:label :Neuroglia "سلول‌های گلی"@fa)
+SubClassOf(:Neuroglia :Cell)
+
+# Class: :Neuron (:Neuron)
+
+SubClassOf(:Neuron :Cell)
+
+# Class: :NodeOfRanvier (:NodeOfRanvier)
+
+SubClassOf(:NodeOfRanvier :CellStructure)
+SubClassOf(:NodeOfRanvier ObjectExactCardinality(1 :partOf :Axon))
+
+# Class: :Nuclei (:Nuclei)
+
+AnnotationAssertion(<dcns:date> :Nuclei "1492101969031"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Nuclei "morteza"^^xsd:string)
+SubClassOf(:Nuclei :BrainRegion)
+
+# Class: :OccipitalLobe (:OccipitalLobe)
+
+SubClassOf(:OccipitalLobe :Lobe)
+
+# Class: :Oligodendrocyte (الیگودندروگلی)
+
+AnnotationAssertion(rdfs:label :Oligodendrocyte "الیگودندروگلی"@fa)
+AnnotationAssertion(rdfs:label :Oligodendrocyte "سلول‌های گلیال کم‌دندریت"@fa)
+SubClassOf(:Oligodendrocyte :MacroglialCell)
+
+# Class: :PapezCircuit (:PapezCircuit)
+
+AnnotationAssertion(<dcns:date> :PapezCircuit "1492101771890"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :PapezCircuit "morteza"^^xsd:string)
+SubClassOf(:PapezCircuit :Circuit)
+
+# Class: :ParahippocampalGyrus (:ParahippocampalGyrus)
+
+AnnotationAssertion(<dcns:date> :ParahippocampalGyrus "1492101913925"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ParahippocampalGyrus "morteza"^^xsd:string)
+SubClassOf(:ParahippocampalGyrus :BrainRegion)
+
+# Class: :ParietalLob (:ParietalLob)
+
+SubClassOf(:ParietalLob :Lobe)
+
+# Class: :Pathway (:Pathway)
+
+AnnotationAssertion(<dcns:date> :Pathway "1492101931649"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Pathway "morteza"^^xsd:string)
+SubClassOf(:Pathway :Connection)
+
+# Class: :PerforantPathway (:PerforantPathway)
+
+AnnotationAssertion(<dcns:date> :PerforantPathway "1492101939691"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :PerforantPathway "morteza"^^xsd:string)
+SubClassOf(:PerforantPathway :Pathway)
+
+# Class: :PeripheralNervousSystem (PNS)
+
+AnnotationAssertion(rdfs:label :PeripheralNervousSystem "PNS"@en)
+SubClassOf(:PeripheralNervousSystem :IntegerationCenter)
+
+# Class: :PinealBody (:PinealBody)
+
+SubClassOf(:PinealBody :Epithalamus)
+
+# Class: :Pons (:Pons)
+
+SubClassOf(:Pons :Metencephalon)
+
+# Class: :SatelliteCell (:SatelliteCell)
+
+SubClassOf(:SatelliteCell :Neuroglia)
+
+# Class: :SchwannCell (سلول شوان)
+
+AnnotationAssertion(rdfs:label :SchwannCell "سلول شوان"@fa)
+SubClassOf(:SchwannCell :Neuroglia)
+
+# Class: :SensoryNeuron (:SensoryNeuron)
+
+SubClassOf(:SensoryNeuron :Neuron)
+
+# Class: :SomaticMotorNeuron (:SomaticMotorNeuron)
+
+SubClassOf(:SomaticMotorNeuron :EfferentNeuron)
+
+# Class: :SomaticNervousSystem (:SomaticNervousSystem)
+
+SubClassOf(:SomaticNervousSystem :PeripheralNervousSystem)
+
+# Class: :SpinalCord (:SpinalCord)
+
+SubClassOf(:SpinalCord :CenteralNervousSystem)
+SubClassOf(:SpinalCord ObjectExactCardinality(1 :partOf :CenteralNervousSystem))
+
+# Class: :StriaMedullares (:StriaMedullares)
+
+SubClassOf(:StriaMedullares :Epithalamus)
+
+# Class: :SubcorticalNuclei (:SubcorticalNuclei)
+
+AnnotationAssertion(<dcns:date> :SubcorticalNuclei "1492102508549"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :SubcorticalNuclei "morteza"^^xsd:string)
+SubClassOf(:SubcorticalNuclei :Nuclei)
+
+# Class: :Subiculum (:Subiculum)
+
+AnnotationAssertion(<dcns:date> :Subiculum "1492101871960"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Subiculum "morteza"^^xsd:string)
+SubClassOf(:Subiculum :BrainRegion)
+
+# Class: :Subthalamus (:Subthalamus)
+
+SubClassOf(:Subthalamus :Diencephalon)
+
+# Class: :SynapticEndBulb (:SynapticEndBulb)
+
+SubClassOf(:SynapticEndBulb :CellStructure)
+SubClassOf(:SynapticEndBulb ObjectExactCardinality(1 :partOf :Neuron))
+
+# Class: :TaeniaThalami (:TaeniaThalami)
+
+SubClassOf(:TaeniaThalami :Epithalamus)
+
+# Class: :Tectum (:Tectum)
+
+SubClassOf(:Tectum :Midbrain)
+
+# Class: :Telencephalon (:Telencephalon)
+
+SubClassOf(:Telencephalon :GrayMatter)
+
+# Class: :TemporalLob (:TemporalLob)
+
+SubClassOf(:TemporalLob :Lobe)
+
+# Class: :ThalamicNucleus (:ThalamicNucleus)
+
+SubClassOf(:ThalamicNucleus :Subthalamus)
+
+# Class: :Thalamus (:Thalamus)
+
+SubClassOf(:Thalamus :Diencephalon)
+
+# Class: :UnmyelinatedAxon (:UnmyelinatedAxon)
+
+SubClassOf(:UnmyelinatedAxon :Axon)
+
+# Class: :Ventricle (:Ventricle)
+
+AnnotationAssertion(<dcns:date> :Ventricle "1492102438598"^^xsd:long)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Ventricle "morteza"^^xsd:string)
+SubClassOf(:Ventricle :BrainRegion)
+
+# Class: :WhiteMatter (:WhiteMatter)
+
+SubClassOf(:WhiteMatter :BrainRegion)
+
+# Class: :ZonaIncerta (:ZonaIncerta)
+
+SubClassOf(:ZonaIncerta :Subthalamus)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Broca (:Broca)
+
+ClassAssertion(:BrainRegion :Broca)
+
+# Individual: :DorsolateralPrefrontalCortex (:DorsolateralPrefrontalCortex)
+
+AnnotationAssertion(:aka :DorsolateralPrefrontalCortex "DLPFC")
+ClassAssertion(:BrainRegion :DorsolateralPrefrontalCortex)
+DataPropertyAssertion(:residesIn :DorsolateralPrefrontalCortex "46"^^xsd:integer)
+
+
+DisjointClasses(:Astrocyte :EpendymalCell :Oligodendrocyte)
 )
