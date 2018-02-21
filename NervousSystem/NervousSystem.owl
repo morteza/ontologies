@@ -11,9 +11,12 @@ Annotation(:author "Morteza Ansarinia"@en)
 Annotation(:author "ansarinia_m@iricss.org"@en)
 Annotation(:authorEmail "ansarinia@me.com"@en)
 
+Declaration(Class(:Acetylcholine))
 Declaration(Class(:AfferentNeuron))
 Declaration(Class(:AlvearPathway))
+Declaration(Class(:AlzheimersDisease))
 Declaration(Class(:Astrocyte))
+Declaration(Class(:Attention))
 Declaration(Class(:AutomaticNervousSystem))
 Declaration(Class(:AutomaticNeuron))
 Declaration(Class(:Axon))
@@ -33,25 +36,34 @@ Declaration(Class(:Circuit))
 Declaration(Class(:Connection))
 Declaration(Class(:Dendrite))
 Declaration(Class(:Diencephalon))
+Declaration(Class(:Disorder))
+Declaration(Class(:Dopamine))
 Declaration(Class(:EfferentNeuron))
 Declaration(Class(:Emotion))
 Declaration(Class(:EntorhinalCortex))
 Declaration(Class(:EpendymalCell))
 Declaration(Class(:Epithalamus))
+Declaration(Class(:ExcitatoryNeurotransmitter))
 Declaration(Class(:Fornix))
 Declaration(Class(:FrontalLobe))
 Declaration(Class(:Function))
+Declaration(Class(:GammaAminobutyricAcid))
+Declaration(Class(:Glutamate))
 Declaration(Class(:GrayMatter))
 Declaration(Class(:HabenularNuclei))
+Declaration(Class(:HuntingtonsDisease))
 Declaration(Class(:Hypothalamus))
+Declaration(Class(:InhibitoryNeurotransmitter))
 Declaration(Class(:InsularCortex))
 Declaration(Class(:IntegerationCenter))
 Declaration(Class(:Interneuron))
 Declaration(Class(:LateralMammillaryNuclei))
+Declaration(Class(:Learning))
 Declaration(Class(:LimbicLob))
 Declaration(Class(:Lobe))
 Declaration(Class(:MacroglialCell))
 Declaration(Class(:MammillaryNuclei))
+Declaration(Class(:ManicDepression))
 Declaration(Class(:MedialMammillaryNuclei))
 Declaration(Class(:MedullaOblongata))
 Declaration(Class(:Memory))
@@ -60,26 +72,36 @@ Declaration(Class(:Metencephalon))
 Declaration(Class(:MicroglialCell))
 Declaration(Class(:Midbrain))
 Declaration(Class(:Model))
+Declaration(Class(:MoodDisorder))
+Declaration(Class(:MotorControl))
+Declaration(Class(:Movement))
+Declaration(Class(:MuscleContraction))
 Declaration(Class(:Myelencephalon))
 Declaration(Class(:MyelinSheath))
 Declaration(Class(:MyelinatedAxon))
 Declaration(Class(:Neuroglia))
 Declaration(Class(:Neuron))
+Declaration(Class(:Neurotransmitter))
 Declaration(Class(:NodeOfRanvier))
+Declaration(Class(:Norepinephrine))
 Declaration(Class(:Nuclei))
 Declaration(Class(:OccipitalLobe))
 Declaration(Class(:Oligodendrocyte))
 Declaration(Class(:PapezCircuit))
 Declaration(Class(:ParahippocampalGyrus))
 Declaration(Class(:ParietalLob))
+Declaration(Class(:ParkinsonsDisease))
 Declaration(Class(:Pathway))
 Declaration(Class(:PerforantPathway))
 Declaration(Class(:PeripheralNervousSystem))
 Declaration(Class(:PinealBody))
 Declaration(Class(:Pons))
+Declaration(Class(:Posture))
 Declaration(Class(:SatelliteCell))
 Declaration(Class(:SchwannCell))
 Declaration(Class(:SensoryNeuron))
+Declaration(Class(:Serotonin))
+Declaration(Class(:Sleep))
 Declaration(Class(:SomaticMotorNeuron))
 Declaration(Class(:SomaticNervousSystem))
 Declaration(Class(:SpinalCord))
@@ -96,9 +118,12 @@ Declaration(Class(:ThalamicNucleus))
 Declaration(Class(:Thalamus))
 Declaration(Class(:UnmyelinatedAxon))
 Declaration(Class(:Ventricle))
+Declaration(Class(:Vision))
 Declaration(Class(:WhiteMatter))
 Declaration(Class(:ZonaIncerta))
 Declaration(ObjectProperty(:contains))
+Declaration(ObjectProperty(:involvesIn))
+Declaration(ObjectProperty(:involvesInDisorder))
 Declaration(ObjectProperty(:locatedIn))
 Declaration(ObjectProperty(:originatesIn))
 Declaration(ObjectProperty(:partOf))
@@ -111,6 +136,8 @@ Declaration(AnnotationProperty(<dcns:date>))
 Declaration(AnnotationProperty(:aka))
 Declaration(AnnotationProperty(:author))
 Declaration(AnnotationProperty(:authorEmail))
+Declaration(AnnotationProperty(:description))
+Declaration(AnnotationProperty(:more))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
 ############################
 #   Annotation Properties
@@ -128,10 +155,29 @@ SubAnnotationPropertyOf(:author rdfs:comment)
 
 SubAnnotationPropertyOf(:authorEmail rdfs:comment)
 
+# Annotation Property: :description (:description)
+
+SubAnnotationPropertyOf(:description rdfs:comment)
+
+# Annotation Property: :more (:more)
+
+SubAnnotationPropertyOf(:more rdfs:comment)
+
 
 ############################
 #   Object Properties
 ############################
+
+# Object Property: :involvesIn (:involvesIn)
+
+ObjectPropertyDomain(:involvesIn :Neurotransmitter)
+ObjectPropertyRange(:involvesIn :Function)
+
+# Object Property: :involvesInDisorder (:involvesInDisorder)
+
+SubObjectPropertyOf(:involvesInDisorder :involvesIn)
+ObjectPropertyDomain(:involvesInDisorder :Neurotransmitter)
+ObjectPropertyRange(:involvesInDisorder :Disorder)
 
 # Object Property: :originatesIn (:originatesIn)
 
@@ -166,6 +212,13 @@ DataPropertyRange(:residesIn xsd:integer)
 #   Classes
 ############################
 
+# Class: :Acetylcholine (استیل کولین)
+
+AnnotationAssertion(:description :Acetylcholine "Acetylcholine is a very widely distributed excitatory neurotransmitter that triggers muscle contraction and stimulates the excretion of certain hormones. In the central nervous system, it is involved in wakefulness, attentiveness, anger, aggression, sexuality, and thirst, among other things."@en)
+AnnotationAssertion(rdfs:label :Acetylcholine "استیل کولین"@fa)
+SubClassOf(:Acetylcholine :ExcitatoryNeurotransmitter)
+SubClassOf(Annotation(:description "Alzheimer’s disease is associated with a lack of acetylcholine in certain regions of the brain."@en) :Acetylcholine ObjectSomeValuesFrom(:involvesInDisorder :AlzheimersDisease))
+
 # Class: :AfferentNeuron (:AfferentNeuron)
 
 EquivalentClasses(:AfferentNeuron :SensoryNeuron)
@@ -178,11 +231,20 @@ AnnotationAssertion(<dcns:date> :AlvearPathway "1492101948781"^^xsd:long)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :AlvearPathway "morteza"^^xsd:string)
 SubClassOf(:AlvearPathway :Pathway)
 
+# Class: :AlzheimersDisease (Alzheimer’s Disease)
+
+AnnotationAssertion(rdfs:label :AlzheimersDisease "Alzheimer’s Disease"@en)
+SubClassOf(:AlzheimersDisease :Disorder)
+
 # Class: :Astrocyte (آستروسیت)
 
 AnnotationAssertion(rdfs:label :Astrocyte "آستروسیت"@fa)
 AnnotationAssertion(rdfs:label :Astrocyte "سلول‌های ستاره‌ای شکل"@fa)
 SubClassOf(:Astrocyte :MacroglialCell)
+
+# Class: :Attention (:Attention)
+
+SubClassOf(:Attention :Function)
 
 # Class: :AutomaticNervousSystem (:AutomaticNervousSystem)
 
@@ -271,6 +333,15 @@ SubClassOf(:Dendrite ObjectExactCardinality(1 :partOf :Neuron))
 
 SubClassOf(:Diencephalon :GrayMatter)
 
+# Class: :Dopamine (دوپامین)
+
+AnnotationAssertion(:description :Dopamine "Dopamine is a neurotransmitter involved in controlling movement and posture. It also modulates mood and plays a central role in positive reinforcement and dependency."@en)
+AnnotationAssertion(rdfs:label :Dopamine "دوپامین"@fa)
+SubClassOf(:Dopamine :Neurotransmitter)
+SubClassOf(:Dopamine ObjectSomeValuesFrom(:involvesIn :Movement))
+SubClassOf(:Dopamine ObjectSomeValuesFrom(:involvesIn :Posture))
+SubClassOf(:Dopamine ObjectSomeValuesFrom(:involvesInDisorder :ParkinsonsDisease))
+
 # Class: :EfferentNeuron (:EfferentNeuron)
 
 SubClassOf(:EfferentNeuron :Neuron)
@@ -296,6 +367,10 @@ SubClassOf(:EpendymalCell :MacroglialCell)
 
 SubClassOf(:Epithalamus :Diencephalon)
 
+# Class: :ExcitatoryNeurotransmitter (:ExcitatoryNeurotransmitter)
+
+SubClassOf(:ExcitatoryNeurotransmitter :Neurotransmitter)
+
 # Class: :Fornix (:Fornix)
 
 AnnotationAssertion(<dcns:date> :Fornix "1492101886364"^^xsd:long)
@@ -311,6 +386,27 @@ SubClassOf(:FrontalLobe :Lobe)
 AnnotationAssertion(<dcns:date> :Function "1492101791191"^^xsd:long)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Function "morteza"^^xsd:string)
 
+# Class: :GammaAminobutyricAcid (گابا)
+
+AnnotationAssertion(:aka :GammaAminobutyricAcid "GABA")
+AnnotationAssertion(:description :GammaAminobutyricAcid "GABA (gamma-aminobutyric acid) is an inhibitory neurotransmitter that is very widely distributed in the neurons of the cortex. GABA contributes to motor control, vision, and many other cortical functions. It also regulates anxiety.")
+AnnotationAssertion(:more :GammaAminobutyricAcid "http://thebrain.mcgill.ca/flash/i/i_01/i_01_m/i_01_m_ana/i_01_m_ana.html")
+AnnotationAssertion(rdfs:label :GammaAminobutyricAcid "GABA")
+AnnotationAssertion(rdfs:label :GammaAminobutyricAcid "گابا"@fa)
+SubClassOf(:GammaAminobutyricAcid :InhibitoryNeurotransmitter)
+SubClassOf(:GammaAminobutyricAcid ObjectSomeValuesFrom(:involvesIn :MotorControl))
+SubClassOf(:GammaAminobutyricAcid ObjectSomeValuesFrom(:involvesIn :Vision))
+SubClassOf(Annotation(:description "Some drugs that increase the level of GABA in the brain are used to treat epilepsy and to calm the trembling of people suffering from Huntington’s disease."@en) :GammaAminobutyricAcid ObjectSomeValuesFrom(:involvesInDisorder :HuntingtonsDisease))
+
+# Class: :Glutamate (گلوتامات)
+
+AnnotationAssertion(:description :Glutamate "Glutamate is a major excitatory neurotransmitter that is associated with learning and memory."@en)
+AnnotationAssertion(rdfs:label :Glutamate "گلوتامات"@fa)
+SubClassOf(:Glutamate :ExcitatoryNeurotransmitter)
+SubClassOf(:Glutamate ObjectSomeValuesFrom(:involvesIn :Learning))
+SubClassOf(:Glutamate ObjectSomeValuesFrom(:involvesIn :Memory))
+SubClassOf(Annotation(:description "It is also thought to be associated with Alzheimer’s disease, whose first symptoms include memory malfunctions."@en) :Glutamate ObjectSomeValuesFrom(:involvesInDisorder :AlzheimersDisease))
+
 # Class: :GrayMatter (:GrayMatter)
 
 SubClassOf(:GrayMatter :BrainRegion)
@@ -319,9 +415,18 @@ SubClassOf(:GrayMatter :BrainRegion)
 
 SubClassOf(:HabenularNuclei :Epithalamus)
 
+# Class: :HuntingtonsDisease (Huntington’s Disease)
+
+AnnotationAssertion(rdfs:label :HuntingtonsDisease "Huntington’s Disease"@en)
+SubClassOf(:HuntingtonsDisease :Disorder)
+
 # Class: :Hypothalamus (:Hypothalamus)
 
 SubClassOf(:Hypothalamus :Diencephalon)
+
+# Class: :InhibitoryNeurotransmitter (:InhibitoryNeurotransmitter)
+
+SubClassOf(:InhibitoryNeurotransmitter :Neurotransmitter)
 
 # Class: :InsularCortex (:InsularCortex)
 
@@ -337,6 +442,10 @@ AnnotationAssertion(<dcns:date> :LateralMammillaryNuclei "1492101999500"^^xsd:lo
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :LateralMammillaryNuclei "morteza"^^xsd:string)
 SubClassOf(:LateralMammillaryNuclei :MammillaryNuclei)
 SubClassOf(:LateralMammillaryNuclei ObjectSomeValuesFrom(:partOf :PapezCircuit))
+
+# Class: :Learning (:Learning)
+
+SubClassOf(:Learning :Function)
 
 # Class: :LimbicLob (:LimbicLob)
 
@@ -360,6 +469,10 @@ DisjointClasses(:MacroglialCell :MicroglialCell)
 AnnotationAssertion(<dcns:date> :MammillaryNuclei "1492101984965"^^xsd:long)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :MammillaryNuclei "morteza"^^xsd:string)
 SubClassOf(:MammillaryNuclei :Nuclei)
+
+# Class: :ManicDepression (:ManicDepression)
+
+SubClassOf(:ManicDepression :MoodDisorder)
 
 # Class: :MedialMammillaryNuclei (:MedialMammillaryNuclei)
 
@@ -401,6 +514,22 @@ SubClassOf(:Midbrain :BrainRegion)
 AnnotationAssertion(<dcns:date> :Model "1492102388208"^^xsd:long)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Model "morteza"^^xsd:string)
 
+# Class: :MoodDisorder (:MoodDisorder)
+
+SubClassOf(:MoodDisorder :Disorder)
+
+# Class: :MotorControl (:MotorControl)
+
+SubClassOf(:MotorControl :Function)
+
+# Class: :Movement (:Movement)
+
+SubClassOf(:Movement :MotorControl)
+
+# Class: :MuscleContraction (:MuscleContraction)
+
+SubClassOf(:MuscleContraction :MotorControl)
+
 # Class: :Myelencephalon (:Myelencephalon)
 
 SubClassOf(:Myelencephalon :GrayMatter)
@@ -423,10 +552,22 @@ SubClassOf(:Neuroglia :Cell)
 
 SubClassOf(:Neuron :Cell)
 
+# Class: :Neurotransmitter (:Neurotransmitter)
+
+AnnotationAssertion(:description :Neurotransmitter "Neurotransmitters are chemical molecules that “ferry” nerve impulses across the synapse from one neuron to the next."@en)
+AnnotationAssertion(:more :Neurotransmitter "http://thebrain.mcgill.ca/flash/d/d_01/d_01_m/d_01_m_ana/d_01_m_ana.html"@en)
+
 # Class: :NodeOfRanvier (:NodeOfRanvier)
 
 SubClassOf(:NodeOfRanvier :CellStructure)
 SubClassOf(:NodeOfRanvier ObjectExactCardinality(1 :partOf :Axon))
+
+# Class: :Norepinephrine (:Norepinephrine)
+
+SubClassOf(:Norepinephrine :Neurotransmitter)
+SubClassOf(:Norepinephrine ObjectSomeValuesFrom(:involvesIn :Attention))
+SubClassOf(:Norepinephrine ObjectSomeValuesFrom(:involvesIn :Sleep))
+SubClassOf(Annotation(:description "Norepinephrine plays a role in mood disorders such as manic depression."@en) :Norepinephrine ObjectSomeValuesFrom(:involvesInDisorder :MoodDisorder))
 
 # Class: :Nuclei (:Nuclei)
 
@@ -460,6 +601,11 @@ SubClassOf(:ParahippocampalGyrus :BrainRegion)
 
 SubClassOf(:ParietalLob :Lobe)
 
+# Class: :ParkinsonsDisease (Parkinson’s Disease)
+
+AnnotationAssertion(rdfs:label :ParkinsonsDisease "Parkinson’s Disease"@en)
+SubClassOf(:ParkinsonsDisease :Disorder)
+
 # Class: :Pathway (:Pathway)
 
 AnnotationAssertion(<dcns:date> :Pathway "1492101931649"^^xsd:long)
@@ -485,6 +631,10 @@ SubClassOf(:PinealBody :Epithalamus)
 
 SubClassOf(:Pons :Metencephalon)
 
+# Class: :Posture (:Posture)
+
+SubClassOf(:Posture :MotorControl)
+
 # Class: :SatelliteCell (:SatelliteCell)
 
 SubClassOf(:SatelliteCell :Neuroglia)
@@ -497,6 +647,16 @@ SubClassOf(:SchwannCell :Neuroglia)
 # Class: :SensoryNeuron (:SensoryNeuron)
 
 SubClassOf(:SensoryNeuron :Neuron)
+
+# Class: :Serotonin (سرتونین)
+
+AnnotationAssertion(:description :Serotonin "Serotonin contributes to various functions, such as regulating body temperature, sleep, mood, appetite, and pain."@en)
+AnnotationAssertion(rdfs:label :Serotonin "سرتونین"@fa)
+SubClassOf(:Serotonin :Neurotransmitter)
+
+# Class: :Sleep (:Sleep)
+
+SubClassOf(:Sleep :Function)
 
 # Class: :SomaticMotorNeuron (:SomaticMotorNeuron)
 
@@ -569,6 +729,10 @@ SubClassOf(:UnmyelinatedAxon :Axon)
 AnnotationAssertion(<dcns:date> :Ventricle "1492102438598"^^xsd:long)
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Ventricle "morteza"^^xsd:string)
 SubClassOf(:Ventricle :BrainRegion)
+
+# Class: :Vision (:Vision)
+
+SubClassOf(:Vision :Function)
 
 # Class: :WhiteMatter (:WhiteMatter)
 
